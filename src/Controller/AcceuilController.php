@@ -17,9 +17,6 @@ class AcceuilController extends AbstractController {
      * @return Response
      */
     public function index(): Response{
-        $hello = "Pages de voyages";
-        return $this->render("pages/acceuil.html.twig", [
-            'hello' => $hello
-        ]);
+        return $this->render("pages/acceuil.html.twig");
     }
 }
