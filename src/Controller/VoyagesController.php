@@ -7,19 +7,16 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * Description of AcceuilController
+ * Description of VoyagesController
  *
  * @author loish
  */
-class AcceuilController extends AbstractController {
+class VoyagesController extends AbstractController {
     /**
-     * @Route("/", name="acceuil")
+     * @Route("/voyages", name="voyages")
      * @return Response
      */
     public function index(): Response{
-        $hello = "Pages de voyages";
-        return $this->render("pages/acceuil.html.twig", [
-            'hello' => $hello
-        ]);
+        return $this->render("pages/voyages.html.twig");
     }
 }
