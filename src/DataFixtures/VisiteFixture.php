@@ -25,7 +25,6 @@ class VisiteFixture extends Fixture
                 ->setNote($faker->numberBetween(0, 20))
                 ->setAvis($faker->sentence(4, true));
             
-            dump($visite); // Ajoutez ce dump pour vérifier les valeurs
             $manager->persist($visite);
         }
         

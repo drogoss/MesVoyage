@@ -3,22 +3,34 @@
     <table class="table table-srtiped">
         <thead>
             <tr>
-                <th class="txte-left" scope="cole">
+                <th class="txte-left align-top" scope="cole">
                     ville
                     <a href="{{ path('voyages.sort', {champ:'ville', ordre:'ASC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><</a>
                     <a href="{{ path('voyages.sort', {champ:'ville', ordre:'DESC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">></a>
+                <form class="from-align mt-1" method="post" action="{{ path('voyages.findallequal', {champ:'ville'}) }}">
+                    <div class="from-group mr-1 mb-2">
+                        <input type="text" class="sm" name="recherche">
+                        <button type="submit" class="btn btn-primary mb-2 btn-sm">filtrer</button>              
+                    </div>
+                </form>
                 </th>
-                <th class="txte-left" scope="cole">
+                <th class="txte-left align-top" scope="cole">
                     pays
                     <a href="{{ path('voyages.sort', {champ:'pays', ordre:'ASC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><</a>
                     <a href="{{ path('voyages.sort', {champ:'pays', ordre:'DESC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">></a>
+                <form class="from-align mt-1" method="post" action="{{ path('voyages.findallequal', {champ:'pays'}) }}">
+                    <div class="from-group mr-1 mb-2">
+                        <input type="text" class="sm" name="recherche">
+                        <button type="submit" class="btn btn-primary mb-2 btn-sm">filtrer</button>              
+                    </div>
+                </form>     
                 </th>
-                <th class="txte-end" scope="cole">
+                <th class="txte-end align-top" scope="cole">
                     note
                     <a href="{{ path('voyages.sort', {champ:'note', ordre:'ASC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><</a>
                     <a href="{{ path('voyages.sort', {champ:'note', ordre:'DESC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">></a>
                 </th>
-                <th class="txte-center" scope="cole">date</th>
+                <th class="txte-center align-top" scope="cole">date</th>
             </tr>
         </thead>
         <tbody>
