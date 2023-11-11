@@ -3,9 +3,21 @@
     <table class="table table-srtiped">
         <thead>
             <tr>
-                <th class="txte-left" scope="cole">ville</th>
-                <th class="txte-left" scope="cole">pays</th>
-                <th class="txte-end" scope="cole">note</th>
+                <th class="txte-left" scope="cole">
+                    ville
+                    <a href="{{ path('voyages.sort', {champ:'ville', ordre:'ASC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><</a>
+                    <a href="{{ path('voyages.sort', {champ:'ville', ordre:'DESC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">></a>
+                </th>
+                <th class="txte-left" scope="cole">
+                    pays
+                    <a href="{{ path('voyages.sort', {champ:'pays', ordre:'ASC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><</a>
+                    <a href="{{ path('voyages.sort', {champ:'pays', ordre:'DESC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">></a>
+                </th>
+                <th class="txte-end" scope="cole">
+                    note
+                    <a href="{{ path('voyages.sort', {champ:'note', ordre:'ASC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><</a>
+                    <a href="{{ path('voyages.sort', {champ:'note', ordre:'DESC'}) }}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">></a>
+                </th>
                 <th class="txte-center" scope="cole">date</th>
             </tr>
         </thead>
