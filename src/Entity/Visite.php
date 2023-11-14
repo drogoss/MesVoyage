@@ -74,7 +74,7 @@ class Visite
         }
     }
 
-    public function setDatecreation(?DateTimeInterface $datecreation): static
+    public function setDatecreation(?DateTimeInterface $datecreation): Static
     {
         $this->datecreation = $datecreation;
 
